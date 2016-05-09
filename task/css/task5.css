@@ -1,0 +1,226 @@
+/* CSS Document */
+/* reset */
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0;padding:0;}
+em{font-style:normal}
+img{border:none; vertical-align:top;}
+table{border-collapse:collapse;}
+textarea{ resize:none;overflow:auto;}
+figure{margin: 0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{zoom:1;}
+/* end reset */
+
+/* head*/
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top:10px;
+    left: 40px;
+}
+.navCon{
+    position: absolute;
+    top: 22px;
+    right:0;
+}
+.navCon li{
+    float: left;
+    padding-right: 20px;/*这里直接测量两个a之间的距离，那个点无视*/
+}
+.nav{/* 用类选择，因为加激活会涉及到优先级*/
+    font-size: 12px;
+    color: #fff;
+}
+.activeNav{
+    color: #908f94;
+}
+
+/*main*/
+main{
+    padding: 20px 402px 0 20px;
+    background-color: #dedede;
+}
+.mainLCon,.mainRCon{float: left;}
+/*  缩得太小，移动到下面，两个没有对齐。不知道中间那个距离怎么加才是最好的。*/
+.mainLCon{
+    width: 100%;
+    min-width: 324px;/*大图也要完全展示*/
+    /*height: 9px;
+    background-color: red; 最开始用来测试缩放*/
+}
+.mainRCon{
+    width: 362px;
+   /* height: 9px;
+    background-color: yellow;*/
+    padding: 0 20px;
+    margin-left: -402px;
+    /*  到上面步骤为止，还会覆盖中L，下面开始移动*/
+    position: relative;
+    right: -402px;
+}
+
+/*article1*/
+article{
+    padding: 39px 27px 35px 21px;
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #848484;
+    margin-bottom: 18px;
+}
+article h1{
+   padding-bottom: 22px;/*这里和图里的不一样，图里感觉更粗，已经加到最粗，是不是需要用文字阴影*/
+}
+article h2{
+    font-size: 16px;
+    color: #5b645f;
+    padding-bottom: 16px;
+ }
+article span{
+    font-size: 12px;
+    color: #726e6f;
+    display: inline-block;/*内联元素不知道padding和margin */
+    padding-bottom: 15px;
+}
+article p{
+    font-size: 14px;
+    line-height: 26px;
+    text-indent: 2em;
+}
+.task5img{
+    padding: 11px 0 13px 0px;
+}
+
+/*article2*/
+.list{
+    padding:2px 0 4px 20px;
+}
+.list li{
+    font-size: 16px;
+    line-height: 24px;
+    list-style: none;
+}
+.figurelist{
+    padding:20px 0 0 10px;
+}
+.figurelist li{
+    width: 142px;
+    height: 162px;
+    padding-right: 20px;
+    float: left;
+    list-style: none;
+}
+.figurelist li figure{
+    width: 120px;
+    height: 140px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+.figurelist li figure figcaption{
+    padding-bottom: 12px;
+}
+.figurelist li figure figcaption a{
+    text-decoration: none;
+    color: #000;
+}
+/*article3*/
+article ol{
+    padding:0 0 24px 48px;
+}
+table{
+    width: 90%;
+}
+table,th,td{
+    border: 1px solid #cdcdcd;
+}
+th,td{
+    padding-left: 5px;
+    /*里面的内容不顶格 */
+}
+th{
+    height: 24px;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+}
+tfoot{
+    background-color: #ccc;
+}
+
+/*aside*/
+aside{
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #848484;
+    padding: 20px 20px 0 20px;
+}
+aside h2{
+    height: 38px;
+    line-height: 38px;
+    padding-left:10px ;
+    margin-bottom: 22px;
+    border-left: 3px solid #eee;
+    font-size: 16px;
+}
+form p{
+    font-size: 12px;
+    padding: 0 0 24px 122px;
+    color: #e2e2e2;
+}
+label{
+    font-size: 12px;
+    padding-right: 14px;
+}
+.inputCon1{
+    padding: 0 0 12px 14px;
+}
+.inputCon2{
+    padding: 0 0 10px 36px;
+}
+.inputCon3{
+    padding: 0 0 12px 12px;
+}
+.inputCon4,.inputCon5,.inputCon6{
+    padding: 0 0 12px 72px;
+}
+.inputCon6 input[type="checkbox"],.inputCon6 label{
+    vertical-align: bottom;
+}
+.inputCon7{
+    padding: 0 0 10px 40px;
+}
+.profile{
+    display: inline-block;
+    height: 98px;
+    vertical-align: top;
+}
+textarea{
+    width: 207px;
+    height: 98px;
+    vertical-align: top;
+}
+.btn{
+    width: 322px;
+    height: 38px;
+    margin-bottom: 20px;
+    border-radius: 10px/10px;
+    background-color: #3355d0;
+    color: #fff;
+    font-weight: bold;
+}
+/*footer*/
+footer{
+    height: 70px;
+    background-color: #000;
+    text-align: center;
+}
+footer p{
+    color: #fff;
+    font-size: 12px;
+    line-height: 70px;
+}

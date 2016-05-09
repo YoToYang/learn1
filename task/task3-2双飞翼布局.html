@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,div{margin: 0; padding: 0;}
+        body{ font-size: 12px;}
+        li{list-style: none;}
+        ul{margin: 0;padding: 0;}
+        .clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+        .clearfix{zoom:1;}
+        .content{
+            background-color: #eee;
+            /*padding: 20px 162px 0 242px;*/
+            padding-top: 20px;
+        }
+        .profileCon,.teamCon,.personCon{float: left;}
+        .profileCon{
+            width: 100%;
+            background-color: yellow;
+        }
+        .wrap{
+            height: 500px;
+            background-color: red;
+            margin: 0 162px 0 242px;
+        }
+        .teamCon{
+            width: 202px;/* 里面还有team的两个边框*/
+            padding: 0 20px 0 20px;
+            margin-left: -100%;
+        }
+        .team{
+            width:158px;
+            height: 80px;
+            padding: 20px;
+            border: 1px solid #999;
+            background-color: #fff;
+        }
+        .teamL{/* 公用样式 */
+            width: 78px;
+            height: 78px;
+            border: 1px solid #999;
+            background-color: #eee;
+            float: left;
+            text-align: center;
+        }
+        .teamR{
+            float: right;
+        }
+        .personCon{
+            width: 122px;
+            padding: 0 20px 0 20px;
+           margin-left: -162px;
+        }
+        .person{
+            width: 78px;
+            height: 400px;
+            padding: 20px 20px 0 20px;
+            background-color: #fff;
+            border: 1px solid #999;
+        }
+        .person li {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="content clearfix">
+    <div class="profileCon"><!-- 这个宽度100%，再加margin就会在父级里位置偏移 -->
+        <div class="wrap"></div><!-- 是里面这个div起作用的，加上背景色和margin -->
+    </div>
+    <div class="teamCon">
+        <div class="team">
+            <div class="teamL"><p>团队logo</p><p>80*80</p></div>
+            <div class="teamR">团队名称</div>
+        </div>
+    </div>
+    <div class="personCon">
+        <ul class="person">
+            <li class="teamL"><p>团队logo</p><p>80*80</p></li>
+            <li class="teamL"><p>团队logo</p><p>80*80</p></li>
+            <li class="teamL"><p>团队logo</p><p>80*80</p></li>
+            <li class="teamL"><p>团队logo</p><p>80*80</p></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       /* .div1{
+            width: 100%;
+            height: 600px;
+            background-color: gray;
+        }
+        .div2{
+            width: 100%;
+            height: 500px;
+            background-color: red;
+        }
+        .div3{
+            margin: 0 50px;
+            height: 500px;
+            background-color: blue;
+        }*/
+        /*div {
+            width: 100px;
+            height: 100px;
+        }
+        .d1{
+            background-color: red;
+            position: relative;
+            top: 0;
+        }
+        .d2{
+            background-color: blue;
+            position: relative;
+            top: 10px;
+            right: -10px;
+        }
+        .d3{
+            background-color: yellow;
+        }*/
+        /*div {
+            width: 100px;
+            height:100px;
+            margin: 50px;
+            background-color: yellow;
+            border-radius: 0 0 0 0/ 0 50% 0 0;
+        }*/
+    </style>
+    <script>
+       /* window.onload = function(){
+            function stopBubble(e){
+                if(e && e.stopPropagation){//如果不是IE浏览器
+                    e.stopPropagation();
+                }else{//是IE浏览器
+                    window.event.cancelBubble=true;
+                }
+            }
+            var all = document.getElementsByTagName("*");
+            for(var i =0;i<all.length;i++){
+                all[i].onmouseover = function(e){//鼠标悬停在元素上
+                    this.style.border="1px solid red";
+                    stopBubble(e);
+                };
+                all[i].onmouseout=function(e){//鼠标离开
+                    this.style.border="0px";
+                    stopBubble(e);//阻止冒泡，若不加，则会在鼠标移入window的时候body会出现边框，移入li的是时候，其所有父级会出现边框
+                };
+            }
+        }*/
+    </script>
+</head>
+<body>
+<!--<div class="div1">
+    <div class="div2">
+        <div class="div3"></div>
+    </div>
+</div>-->
+<!--测试二：position：relative是根据它静态时的位置进行定位的
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3"></div>
+-->
+<!--<div></div>  border-radius的测试-->
+<!--<div width="100">123</div>-->
+
+<div id="body">
+    <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">About</a></li>
+    </ul>
+</div>
+<!--例2-->
+<!--<div onclick="eventHandle(event)" id="outSide" style="width:100px; height:100px; background:#000; padding:50px">
+    <div id="inSide" style="width:100px; height:100px; background:#CCC"></div>
+</div>
+<script type="text/javascript">
+    //本例子只在外面盒子定义了处理方法，而这个方法一样可以捕获到子元素点击行为并处理它。假设有成千上万子元素要处理，难道我们要为每个元素加“onclick="eventHandle(event)"”？显然没有这种集中处理的方法来的简单，同时它的性能也是更高的。
+    function eventHandle(e)
+    {
+        var e=e||window.event;
+        var obj=e.target||e.srcElement;
+        alert(obj.id+' was click')
+    }
+</script>-->
+<!--例3-->
+<div onclick="outSideWork()" id="outSide" style="width:100px; height:100px; background:#000; padding:50px">
+    <div onclick="inSideWork()" id="inSide" style="width:100px; height:100px; background:#CCC"></div>
+</div>
+<script type="text/javascript">
+    function outSideWork()
+    {
+        alert('My name is outSide,I was working...');
+    }
+
+    function inSideWork()
+    {
+        alert('My name is inSide,I was working...');
+    }
+
+    //因为下面程序自动激活单击事件，有些浏览器不允许，所以请单击灰色盒子，从这里开始下命令，这样因为冒泡的原因，黑色大盒子也会收到单击事件，并调用了自己的处理程序。如果还有更多盒子嵌套，一样道理。
+
+    /*
+     function bossOrder()
+     {
+     document.getElmentById('inSide').click();
+     }
+     bossOrder();
+     */
+    function fn1(a){
+        alert(a);//1,全局a的传入
+        a=2;//改了局部a的值，这里是它的参数，是局部的
+    }
+    fn1(a);//全局a传入
+    alert(a);//1*/
+</script>
+<!--<figure>块标签
+    <figcaption><a href="#">好看的图片</a></figcaption>
+    <img src="http://img1.gtimg.com/15/1588/158840/15884086_small.jpg" alt="草泥马">
+</figure>
+<figure>
+    <figcaption><a href="#">好看的图片</a></figcaption>
+    <img src="http://img1.gtimg.com/15/1588/158840/15884086_small.jpg" alt="草泥马">
+</figure>-->
+</body>
+</html>

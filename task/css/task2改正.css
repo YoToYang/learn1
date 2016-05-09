@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background: #333;
+}
+.navbar {
+    position: relative;
+    width: 90%;
+    min-height: 60px;
+    margin: 0 auto;
+}
+.navbar-header {
+    float: left;
+    padding: 10px 0;
+}
+.navbar-footer {
+    float: right;
+    margin-top: 22px;
+}
+.navbar-footer li {
+    float: left;
+}
+ul:after {
+    display: block;
+    clear: both;
+    content: ' ';
+}
+.navbar-footer li a {
+    font: 20px;
+    line-height: 1;
+    padding: 10px 25px 10px 0;
+    text-decoration: none;
+    color: #fff;
+}
+.navbar-footer li a.active {
+    color: #999;
+}
+main {
+    padding: 0 20px 20px;
+}
+article, aside {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 1px #848484;
+}
+article p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+article h2 {
+    margin: 20px 0;
+}
+article > h3 {
+    margin: 10px 0;
+    color: #666;
+}
+article p {
+    text-indent: 2em;
+}
+.subtitle {
+    font-size: .8em;
+    text-indent: 0;
+    color: #999;
+}
+p time {
+    margin: 0 5px;
+}
+article ul {
+    list-style: none;
+}
+.article2 ul li {
+    margin: 10px 40px;
+}
+.gallery ul li {
+    width: 180px;
+    margin: 10px 0 10px 40px;
+    padding-bottom: 10px;
+    text-align: center;
+    border: 1px solid #999;
+}
+.gallery ul li h3 {
+    font-size: .8em;
+    padding: 10px 0;
+}
+.gallery ul li img {
+    width: 160px;
+    height: 120px;
+}
+.article3 ol {
+    margin: 1em 0;
+    padding-left: 40px;
+}
+.article3 ol li {
+    line-height: 1.5;
+}
+.article3 table {
+    font-size: .9em;
+    width: 100%;
+    border-collapse: collapse;
+}
+.article3 table thead {
+    line-height: 1.5;
+    text-align: left;
+    color: #fff;
+    background: #333;
+}
+.article3 table tfoot {
+    font-size: .9em;
+    font-weight: bold;
+    background: #ccc;
+}
+.article3 th, .article3 td {
+    padding: 5px;
+    border: 1px solid #c8c8c8;
+}
+aside {
+    margin: 20px;
+}
+aside h2 {
+    font-size: 1em;
+    line-height: 2;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+}
+aside form {
+    font-size: .9em;
+    margin: 10px 0;
+}
+aside form label, aside form label {
+    float: left;
+    width: 10em;
+    padding-right: 1em;
+    text-align: right;
+}
+aside form div {
+    clear: left;
+    width: 70%;
+    margin: 10px auto;
+}
+.password-area {
+    width: 100%;
+    margin: 20px auto;
+}
+aside form div p {
+    margin: 10px 0 10px 11em;
+    margin-left: 11em;
+    color: #a9a9a9;
+}
+aside form div textarea {
+    width: 70%;
+    height: 100px;
+}
+aside form button {
+    font-size: 1em;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background: #3355d0;
+}
+footer {
+    min-height: 70px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+}
+footer p {
+    font-size: 10px;
+    padding: 30px 0;
+}
